@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -42,7 +43,7 @@ public class Ship {
     @Enumerated(EnumType.STRING)
     private ShipType shipType = ShipType.CARRIER;
     
-    @OneToMany
+    @OneToMany(mappedBy = "ship")
     @JsonIgnore
     private List<Coordinate> coordinates;
 }

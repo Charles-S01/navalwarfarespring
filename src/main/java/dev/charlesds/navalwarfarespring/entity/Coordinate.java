@@ -37,7 +37,7 @@ public class Coordinate {
 
     @ManyToOne
     private Ship ship;
-    
+
     private int row;
     private int col;
     @Enumerated(EnumType.STRING)
@@ -47,7 +47,3 @@ public class Coordinate {
 
 }
 
-enum AttackResult {
-    HIT,
-    MISS
-}
