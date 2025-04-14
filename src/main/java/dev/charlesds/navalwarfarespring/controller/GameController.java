@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@CrossOrigin(origins = "${ORIGIN_URL}")
+@CrossOrigin(origins = "${allowed.origin}")
 @RestController
 @RequestMapping("/api/game")
 public class GameController {
