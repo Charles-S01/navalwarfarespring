@@ -13,6 +13,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override 
     public void registerStompEndpoints(StompEndpointRegistry registry) { 
        registry.addEndpoint("/ws").setAllowedOrigins("https://naval-warfare.vercel.app"); 
+        // registry.addEndpoint("/ws").setAllowedOrigins("http://localhost:5173"); 
     } 
     
     @Override 
