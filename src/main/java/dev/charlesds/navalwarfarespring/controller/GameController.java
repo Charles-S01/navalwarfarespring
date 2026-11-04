@@ -41,23 +41,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/api/game")
 public class GameController {
 
-    @Autowired
-    private GameRepository gameRepository;
-    @Autowired
-    private PlayerRepository playerRepository;
-    @Autowired
-    private GameboardRepository gameboardRepository;
-    @Autowired
-    private ShipRepository shipRepository;
-    @Autowired
-    private CoordinateRepository coordinateRepository;
-
     @PersistenceContext
     private EntityManager entityManager;
     
-    @Autowired
-    private SimpMessagingTemplate simpMessagingTemplate;
-
     @Autowired
     private GameService gameService;
     
